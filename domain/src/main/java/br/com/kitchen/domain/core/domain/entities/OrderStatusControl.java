@@ -31,5 +31,4 @@ public class OrderStatusControl implements Serializable {
         this.orderStatus = OrderStatus.getFromOrder(-1);
         this.lastUpdate = LocalDateTime.now();
     }
-
 }
