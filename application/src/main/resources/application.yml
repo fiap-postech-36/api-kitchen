@@ -1,25 +1,11 @@
 spring:
-  datasource:
-    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:27017/restaurant?useSSL=false}
-    username: ${SPRING_DATASOURCE_USERNAME:postgres}
-    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+  mongodb:
+    uri: ${SPRING_DATA_MONGODB_URI:jdbc:postgresql://localhost:27017/restaurant?useSSL=false}
   rabbitmq:
     host: ${RABBIT_HOST:localhost}
     port: 5672
     username: ${RABBIT_USER:ulysses}
     password: ${RABBIT_PASSWORD:senha123}
-  flyway:
-    locations: classpath:db/migration
-    baselineOnMigrate: false
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        jdbc:
-          lob:
-            non_contextual_creation: 'true'
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    show-sql: 'true'
 springdoc:
   api-docs:
     enabled: 'true'
