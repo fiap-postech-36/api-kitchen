@@ -15,5 +15,5 @@ Feature: Controle de status de pedidos
   Scenario: Cancelar o pedido
     Given um pedido com ID "12345" é criado
     When o pedido é cancelado
-    Then o status do pedido deve ser "CANCELED"
+    Then o status do pedido deve ser "CANCELLED"
     And a última atualização deve ser registrada

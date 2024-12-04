@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public enum OrderStatus {
 
-    CANCELED("Cancelado", -1, 4),
+    CANCELLED("Cancelado", -1, 4),
     CREATED("Criado", 0, 5),
     RECEIVED("Recebido", 1 , 2),
     IN_PREPARATION("Em preparação", 2, 1),
