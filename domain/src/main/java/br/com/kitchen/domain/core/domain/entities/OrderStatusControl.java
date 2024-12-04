@@ -16,6 +16,10 @@ public class OrderStatusControl implements Serializable {
     private OrderStatus orderStatus;
     private LocalDateTime lastUpdate;
 
+    // Construtor sem parâmetros
+    public OrderStatusControl() {
+    }
+
     public OrderStatusControl(String orderId) {
         this.orderId = orderId;
         orderStatus = OrderStatus.getFromOrder(0);
