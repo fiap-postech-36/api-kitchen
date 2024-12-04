@@ -22,6 +22,11 @@ public class OrderStatusControl implements Serializable {
         lastUpdate = LocalDateTime.now();
     }
 
+    public OrderStatusControl(String orderId, OrderStatus orderStatus) {
+        this.orderId = orderId;
+        this.orderStatus = orderStatus;
+    }
+
     public void nextStepOrder() {
         this.orderStatus = this.orderStatus.getNext();
         this.lastUpdate = LocalDateTime.now();
@@ -31,4 +36,6 @@ public class OrderStatusControl implements Serializable {
         this.orderStatus = OrderStatus.getFromOrder(-1);
         this.lastUpdate = LocalDateTime.now();
     }
+
 }
+
