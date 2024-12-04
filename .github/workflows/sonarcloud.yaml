@@ -47,4 +47,5 @@ jobs:
           -Dsonar.coverage.exclusions=**/domain/**,**/integration/**,**/*Output.java,**/*Config.java \
           -Dsonar.organization=fiap-postech-36 \
           -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}  # Pass the Sonar token here
+          -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+          -Dsonar.branch.name=main # Pass the Sonar token here
